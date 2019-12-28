@@ -9,6 +9,7 @@ public class HasamiShogiGUI {
         HasamiShogiGUI gui = new HasamiShogiGUI();
         gui.boardframe = new BoardFrame();
         gui.boardframe.setVisible(true);
+        //rty
         
     }
 }
