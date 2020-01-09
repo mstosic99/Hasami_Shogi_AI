@@ -25,6 +25,7 @@ public class Move {
 	
 	public Move(Move move, double heuristicValue) {
 		if(move != null) {
+			move.heuristicValue = heuristicValue;
 			this.fromRow = move.fromRow;
 			this.fromColumn = move.fromColumn;
 			this.toRow = move.toRow;

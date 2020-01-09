@@ -24,7 +24,7 @@ import ai_algorithm.SearchAlgorithm;
 public class Board extends JComponent implements Cloneable {
 	
 	Heuristics heuristics = new TestHeuristics(this);
-	SearchAlgorithm algorithm = new AlphaBetaAlgorithm(8, Board.WHITE, heuristics);
+	SearchAlgorithm algorithm = new AlphaBetaAlgorithm(6, Board.WHITE, heuristics);
 
 	public int turnCounter = 1;
 	boolean isWhitesTurn = turnCounter % 2 == 0;
@@ -222,9 +222,11 @@ public class Board extends JComponent implements Cloneable {
 					moveHuman(move);
 					drawBoard();
 					System.out.println(move);
+//					Move move = algorithm.aiMove(BoardFrame.board);
+//					moveHuman(move);
+//					drawBoard();
 				}
-//				unmove(new Move(0,0,2,0));
-//				drawBoard();
+				
 			}
 		}
 
