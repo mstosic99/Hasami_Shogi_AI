@@ -1,6 +1,6 @@
 package modelComp;
 
-public class Piece {
+public class Piece implements Cloneable {
 	private static final int BLACK = 0, WHITE = 1;
 	private int x;
 	private int y;
@@ -18,6 +18,14 @@ public class Piece {
 		this.x = x;
 		this.y = y;
 		this.file_path = file_path;
+		this.board = board;
+	}
+	
+	public Piece(int x, int y, int color, Board board) {
+		this.color = color;
+		is_white = color == Board.WHITE ? true : false;
+		this.x = x;
+		this.y = y;
 		this.board = board;
 	}
 
@@ -117,6 +125,11 @@ public class Piece {
 		}
 
 		return true;
+	}
+	
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
 	}
 
 }

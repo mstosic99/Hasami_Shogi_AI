@@ -1,5 +1,6 @@
 package heuristics;
 
+
 public interface Heuristics {
-	public void evaluate();
+	public double evaluate(int playerColor, int depth);
 }

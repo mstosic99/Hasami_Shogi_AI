@@ -1,6 +1,10 @@
 package ai_algorithm;
 
+import modelComp.Board;
+import modelComp.Move;
+
 public interface SearchAlgorithm {
 
-	public void start();
+
+	public Move aiMove(Board board);
 }
